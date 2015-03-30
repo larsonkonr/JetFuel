@@ -6,10 +6,26 @@
 <% end %>
 <br>
 <h3>Shortened Urls</h3>
+<form class="form-inline top-search shadowed">
+  <input type="text" id="search-bar" class="form-control" placeholder="Search for anything...">
+</form>
+<table id="fileTable" class="tablesorter" cellspacing="100px">
+  <thead>
+    <tr class="spacer">
+      <th id="file-table-name">Title</th>
+      <th id="file-table-size">Original Url</th>
+      <th id="file-table-added">Shortened Url</th>
+      <th id="file-table-updated">Used</th>
+    </tr>
+  </thead>
+  <tbody>
 <% @urls.each do |url| %>
-Title --------------- <%= url.title %><br>
-Original Url -------- <%= url.original_url %><br>
-Shortened Url ------ <%= url.shortened_url %><br>
-Usage --------------- <%= url.usage %>
-<br><br>
+    <tr class="search-item">
+      <td id="file-table-title"><%= url.title %></td>
+      <td id="file-table-original_url"><%= url.original_url %></td>
+      <td id="file-table-shortened_url"><%= url.shortened_url %></td>
+      <td id="file-table-usage"><%= url.usage %></td>
+    </tr>
 <% end %>
+  </tbody>
+</table>

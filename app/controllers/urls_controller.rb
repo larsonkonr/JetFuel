@@ -1,7 +1,7 @@
 class UrlsController < ApplicationController
   def index
     @url = Url.new
-    @urls = Url.all.sort { |b,a| a.usage <=> b.usage}
+    @urls = Url.all.sort { |b , a| a.usage <=> b.usage }
   end
 
   def create
