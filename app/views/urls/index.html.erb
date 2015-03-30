@@ -1,0 +1,15 @@
+<h1>JetFuel</h1>
+<%= form_for(@url) do |f| %>
+  <%= f.label "URL to Shorten" %><br>
+  <%= f.text_field :original_url %><br>
+  <%= f.submit "Shorten" %>
+<% end %>
+<br>
+<h3>Shortened Urls</h3>
+<% @urls.each do |url| %>
+Title --------------- <%= url.title %><br>
+Original Url -------- <%= url.original_url %><br>
+Shortened Url ------ <%= url.shortened_url %><br>
+Usage --------------- <%= url.usage %>
+<br><br>
+<% end %>
