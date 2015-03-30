@@ -10,12 +10,13 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'faraday'
 
 group :development, :test do
+  gem 'launchy'
   gem 'pry'
   gem 'capybara'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
-
